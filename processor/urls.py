@@ -20,6 +20,6 @@ from processor.views import Index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index.as_view(), name="Home"),
+    path('', Index, name="Home"),
     path('designium-solutions/', include("core_1.urls"))
 ]

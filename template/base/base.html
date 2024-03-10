@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,160 +9,192 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap-utilities.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title %}{% endblock title %}</title>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <div class="mt-3 d-flex justify-content-between">
+    <!-- Header -->
+    <div class="bg-light w-100 pt-3 pb-5">
+        <div class="container">
+            <header>
+                <div class="mt-3 d-flex justify-content-between">
 
-                <div class="d-flex">
-                    <div>
-                        <svg style="height: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path
-                                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                        </svg>
-                    </div>
-
-                    <div class="mi mt-3 ms-2">
-
-                    </div>
-                    <div>
-                        <p class="ms-2">Lorem ipsum, dolor sit amet.</p>
-                    </div>
-                </div>
-
-                <div class="d-flex gap-3">
-                    <div class="mt-1">
-                        <h6>Follow Us: </h6>
-                    </div>
-                    <div>
-                        <svg style="height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                            <path
-                                d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <svg style="height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path
-                                d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <svg style="height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                            <path
-                                d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
-                        </svg>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg bg-light p-2 rounded-2">
-                <div class="container-fluid">
-                    <div>
-                        <a href="#"><img src="https://dummyimage.com/55x30/f5f2f0/fff" alt="logo"></a>
-                        <a class="navbar-brand" href="#">Navbar</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-
-
-                            <li class="nav-item me-4 dropdown">
-                                <a class="nav-link fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Home
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item me-4 dropdown">
-                                <a class="nav-link fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Booking
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item me-4 dropdown">
-                                <a class="nav-link fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Contact
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item me-4 dropdown">
-                                <a class="nav-link fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    About
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-
-
-                        </ul>
-
-                        <div class="d-flex gap-2">
-
-
-                            <div>
-                                <svg style="height: 20px; color:black" fill="black" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
-                                    <path
-                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                                </svg>
-                            </div>
+                    <div class="d-flex">
+                        <div>
+                            <svg style="height: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path
+                                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                            </svg>
                         </div>
 
+                        <div class="mi mt-3 ms-2"></div>
+                        <div>
+                            <p class="ms-2">Lorem ipsum, dolor sit amet.</p>
+                        </div>
+                    </div>
 
+                    <div class="d-flex gap-3">
+                        <div class="mt-1">
+                            <h6>Follow Us: </h6>
+                        </div>
+                        <div>
+                            <svg style="height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <svg style="height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <svg style="height: 15px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path
+                                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                            </svg>
+                        </div>
 
                     </div>
                 </div>
-            </nav>
+
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg bg-white p-2 rounded-2">
+                    <div class="container-fluid">
+                        <div>
+                            <a href="#"><img src="https://dummyimage.com/55x30/f5f2f5/fff" alt="logo"></a>
+                            <a class="navbar-brand" href="#">Navbar</a>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
 
-        </header>
+                                <li class="nav-item me-4 dropdown">
+                                    <a class="nav-link fs-5" href="#">
+                                        Home
+                                    </a>
+
+                                </li>
+                                <li class="nav-item me-4 dropdown">
+                                    <a class="nav-link fs-5" href="#">
+                                        Booking
+                                    </a>
+
+                                </li>
+                                <li class="nav-item me-4 dropdown">
+                                    <a class="nav-link fs-5" href="#">
+                                        Contact
+                                    </a>
+
+                                </li>
+                                <li class="nav-item me-4 dropdown">
+                                    <a class="nav-link fs-5" href="#">
+                                        About
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+                            <div class="d-flex gap-2">
+
+
+                                <div>
+                                    <svg style="height: 20px; color:black" fill="black"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                    </svg>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </nav>
+
+
+            </header>
+
+            {% block main%}{% endblock main %}
+        </div>
+
     </div>
+
     {% block content %}{% endblock content %}
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 p-5 ">
+                    <h2>Logo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nobis
+                        dignissimos fuga aliquam, deleniti ullam beatae. Eveniet vel, natus reprehenderit animi,
+                        adipisci fugiat dignissimos quisquam numquam aperiam maxime ea!</p>
+                    <p>links</p>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 p-5">
+                    <h2>Links</h2>
+                    <ul class="list-unstyled ps-4">
+                        <li><a href="#" class="text-decoration-none text-dark" style="font-size:large">Home</a> </li>
+                        <li><a href="#" class="text-decoration-none text-dark" style="font-size:large">Booking</a> </li>
+                        <li><a href="#" class="text-decoration-none text-dark" style="font-size:large">About</a> </li>
+                        <li><a href="#" class="text-decoration-none text-dark" style="font-size:large">Contact</a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 pt-5">
+                    <div class="container-fluid pt-4 rounded-3 " style="background-color: white; height:200px">
+                        <h4>Join our newsletter</h4>
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-lg-8 col-sm-12">
+                                    <input type="email" name="email" id="email" placeholder="Write your email!"
+                                        class="w-100 bg-light p-2"
+                                        style="border:none; outline:none; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;width:100%;">
+                                </div>
+                                <div class="col-lg-4 col-sm-12 text-end ">
+                                    <button class="btn btn-primary w-100 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
+        </div>
+    </div>
     <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    
+
     <script>
+
         {% block js %}
         {% endblock js %}
     </script>
 </body>
+
 </html>

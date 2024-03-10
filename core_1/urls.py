@@ -1,6 +1,7 @@
 from django.urls import path
-from core_1.views import Register
+from core_1.views import Register, Login, VerifyOtp
 urlpatterns = [
-    path('public/regiter', Register.as_view(), name="register"),
-    path('public/get-new-otp', Register.as_view(), name="register")
+    path('public/register', Register.as_view(), name="register"),
+    path('public/verify-otp', VerifyOtp.as_view(), name="verifyotp"),
+    path('public/login', Login.as_view(), name="login"),
 ]
