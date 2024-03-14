@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.views.generic import TemplateView
 from django.contrib.auth import get_user_model
 from core_1.utils import generate_otp, email_manager
@@ -57,7 +58,7 @@ class Register(TemplateView):
             # Send email
             email_manager(user, subject, message)
 
-            return render(request, self.otp_verify_page)
+            return render(request, self.otp_verify_page, {"email": email})
 
         elif email is None:
             # If email is not provided, show error message and redirect to registration page
@@ -89,10 +90,10 @@ class Login(TemplateView):
     template_name = "core_1/login.html"
     otp_verify_page = "core_1/otp_verify.html"
     index_template = 'index.html'
+
     def post(self, request):
         email = request.POST.get('email')
         password = request.POST.get('password')
-
         user = authenticate(username=email, password=password)
 
         if user:
@@ -107,6 +108,7 @@ class Login(TemplateView):
 
             login(request, user)
             return render(request, self.template_name)
+
         messages.error(request, 'Invalid credential.')
         return redirect('login')
     
@@ -114,29 +116,44 @@ class Login(TemplateView):
 
         return render(request, self.template_name)
 
-class VerifyOtp(TemplateView):
-    template_name = 'index.html'
-
-    def post(self, request):
+def VerifyOtp(request):
+    if request.method == "POST":
         email = request.POST.get('email')
         otp = request.POST.get('otp')
        
         if email and otp:
-            user = User.objects.get(email=email)
-            time = datetime.datetime.now().time()
-    
+            try:
+                user = User.objects.get(email=email)
+            except User.DoesNotExist:
+                messages.error(request, 'User with this email does not exist.')
+                return redirect('verifyotp')
+
+            current_time = datetime.datetime.now().time()
+
             if str(user.otp) == otp:  
-                if time.minute-user.otp_delay.minute > 5:
+                if current_time.minute - user.otp_delay.minute > 5:
                     messages.error(request, 'Otp Expired.')
                     return redirect('verifyotp')
                 user.is_verified = True
                 user.save()
                 
                 login(request, user)
-                return render(request, self.template_name)
+                return redirect('Home')
             else:
                 messages.error(request, 'Invalid Otp.')
                 return redirect('verifyotp')
         else:
             messages.error(request, 'Credentials not provided.')
             return redirect('verifyotp')
+    # Add a return statement in case the request method is not POST
+    messages.error(request, 'Invalid request.')
+    return redirect('verifyotp')
+
+
+# RENDER FUNCTIONS
+def about(request):
+    return render(request, 'core_1/About.html')
+
+# RENDER FUNCTIONS
+def contact(request):
+    return render(request, 'core_1/contact.html')

@@ -49,6 +49,7 @@ class User(AbstractUser):
     last_login = models.DateTimeField(default=None, null=True, db_index=True)
     is_verified = models.BooleanField(default=False)
     password = models.CharField(max_length=200, db_index=True, default=None)
+    active = models.BooleanField(default=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

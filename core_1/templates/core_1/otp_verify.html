@@ -17,18 +17,14 @@
 <body class="p-3 bg-light">
     <div class="otp-page">
         <h1 class="text-center pt-5" style="color:rgb(199, 129, 0)">Otp Verification</h1>
-        <form action="/designium-solutions/public/verify-otp" method="post">
+        <form method="post" action="/designium-solutions/public/verify-otp">
             {% csrf_token %}
             <div class="d-flex flex-column mb-4 ">
 
                 <input type="email" placeholder="Email" name="email" class="mt-3 l-inp-f ps-2 input-hd rounded-2 d-none"
                     value="{{email}}">
-
                 <input type="text" placeholder="Enter Otp" name="otp" class="mt-3 l-inp-f ps-2 input-hd rounded-2 ">
-
             </div>
-
-
             <button class="d-block m-auto l-btn bg-primary text-white" type="submit">Verify</button>
         </form>
     </div>

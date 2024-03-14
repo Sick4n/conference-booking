@@ -82,6 +82,11 @@
         height: 200px;
         width: 100%;
     }
+
+    #first-img {
+        margin-top: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 600px) and (min-width: 400px) {
@@ -96,6 +101,11 @@
         height: 300px;
         width: 100%;
     }
+
+    #first-img {
+        margin-top: 20px;
+    }
+
 }
 
 #mmi {
@@ -123,7 +133,18 @@
         height: 300px;
         width: 100%;
     }
+
+    #first-img {
+        margin-top: 20px;
+    }
+
 }
+
+/* @media only screen and (max-width: 768px) and (min-width: 465px) {
+    .feat1{
+        margin-right: 74px;
+    }
+} */
 @media only screen and (max-width: 500px) and (min-width: 350px) {
     #mmm {
         margin-top: 150px;
@@ -139,6 +160,40 @@
     #mmi {
         height: 300px;
         width: 100%;
+    }
+
+    .send-btn {
+        margin-top: 10px;
+    }
+
+    #first-img {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) and (min-width: 250px) {
+    #mmm {
+        margin-top: 150px;
+    }
+
+    #area-sec {
+        height: 1500px;
+        margin-top: 80px;
+        width: 100%;
+        /* margin-bottom: 20px; */
+    }
+
+    #mmi {
+        height: 300px;
+        width: 100%;
+    }
+
+    .send-btn {
+        margin-top: 10px;
+    }
+
+    #first-img {
+        margin-top: 20px;
     }
 }
 
@@ -188,4 +243,289 @@ input[type="time"] {
     outline: none;
     border: none;
 
+}
+---------------------------------------------------------------------------------------
+
+/* About css */
+
+
+#about-nav{
+    background-color: rgb(72, 72, 72) !important;
+}
+
+#about-btn {
+    width: 200px;
+    height: 70px;
+    outline: none;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(199, 129, 0);
+    transition: all .4s ease-in-out;
+}
+#about-btn:hover{
+    color: black;
+}
+
+#about-btn:hover path {
+    background-color: white;
+    /* color: black; */
+    fill: black;
+
+}
+/* .about-svg:hover path {
+    fill: black;
+
+} */
+
+.about-sec {
+    margin: auto;
+    background-image: url(https://dummyimage.com/900x550/484848/000000);
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    /* or any desired height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-sec {
+    margin-top: 120px;
+}
+
+#card-section {
+    margin-top: 90px;
+    width: 100%;
+}
+
+#card-sec:hover {
+    border: 1px solid rgb(199, 129, 0);
+}
+
+.img-sec {
+    margin-top: 90px;
+}
+
+#img-card {
+    background-image: url(https://dummyimage.com/200x200/484848/fff);
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    /* or any desired height */
+    width: 100%;
+    border-radius: 0px;
+    justify-content: end;
+    /* margin-bottom: 20px; */
+}
+
+.sb-card {
+    color: rgb(199, 129, 0);
+}
+
+#about-footer {
+    background-color: black;
+}
+
+
+@media only screen and (max-width: 992px) and (min-width: 600px) {
+    .ab-img-card{
+        margin-top: 30px;
+    }
+.ab-img{
+    margin-top: 30px;
+}
+#img-card {
+    margin-top: 30px;
+}
+#img-card-sec{
+    /* margin: auto; */
+   justify-content: center;
+   margin: 0px;
+}
+}
+
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+    .ab-img-card{
+        margin-top: 30px;
+    }
+.ab-img{
+    margin-top: 30px;
+}
+#img-card {
+    margin-top: 30px;
+}
+#img-card-sec{
+    /* margin: auto; */
+   justify-content: center;
+   margin: 0px;
+}
+}
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+    .ab-img-card{
+        margin-top: 30px;
+    }
+.ab-img{
+    margin-top: 30px;
+}
+#img-card {
+    margin-top: 30px;
+}
+#img-card-sec{
+    /* margin: auto; */
+   justify-content: center;
+   margin: 0px;
+}
+}
+@media only screen and (max-width: 400px) and (min-width: 300px) {
+    .ab-img-card{
+        margin-top: 30px;
+    }
+.ab-img{
+    margin-top: 30px;
+}
+#img-card {
+    margin-top: 30px;
+}
+#img-card-sec{
+    /* margin: auto; */
+   justify-content: center;
+   margin: 0px;
+}
+}
+
+
+-----------------------------------------------------------------------------------------
+/* Contact css */
+#contact-nav {
+    background-color: rgb(72, 72, 72);
+}
+
+.contact-sec {
+    margin: auto;
+    background-image: url(https://dummyimage.com/900x550/484848/000000);
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    /* or any desired height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#con1 {
+    margin-top: 100px;
+}
+
+.cont-input {
+    height: 3rem;
+    outline: none;
+
+}
+
+.cont-input:hover {
+    border: 1px solid rgb(199, 129, 0);
+
+}
+
+#text-area {
+    width: 96%;
+    margin-left: 13px;
+    outline: none;
+}
+
+#text-area:hover {
+    border: 1px solid rgb(199, 129, 0);
+}
+
+.cont-btn {
+    width: 200px;
+    height: 70px;
+    outline: none;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(199, 129, 0);
+    transition: all .4s ease-in-out;
+}
+.cont-btn:hover{
+    color: black;
+}
+
+.cont-btn:hover path {
+    background-color: white;
+    /* color: black; */
+    fill: black;
+
+}
+
+#cont-book{
+    width: 200px;
+    height: 70px;
+    outline: none;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(199, 129, 0);
+    transition: all .4s ease-in-out;
+}
+#cont-book:hover{
+    background-color: black;
+}
+
+#contact-footer {
+    background-color: black;
+
+}
+
+/* .cont-input{
+
+} */
+
+@media only screen and (max-width: 992px) and (min-width: 600px) {
+
+    .cont-input1 {
+        margin-top: 20px;
+    }
+
+    #form-sec {
+        margin-top: 35px;
+    }
+
+    .cont-li {
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+    .cont-input1 {
+        margin-top: 20px;
+    }
+
+    #form-sec {
+        margin-top: 35px;
+    }
+
+    .cont-li {
+        margin-top: 25px;
+    }
+   
+}
+@media only screen and (max-width: 400px) and (min-width: 300px) {
+    .cont-input1 {
+        margin-top: 20px;
+    }
+
+    #form-sec {
+        margin-top: 35px;
+    }
+
+    .cont-li {
+        margin-top: 25px;
+    }
+    
 }

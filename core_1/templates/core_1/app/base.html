@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-utilities.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <!-- About Page -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg p-2" style="background-color: rgb(72, 72, 72) !important;">
+        <div class="container-fluid">
+            <div class="mt-1">
+                <a href="#"><img src="https://dummyimage.com/55x30/f5f2f5/fff" alt="logo"></a>
+                <a class="navbar-brand text-white" href="#">Navbar</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-lg-0">
+
+
+                    <li class="nav-item me-4 dropdown mt-3">
+                        <a class="nav-link fs-5 text-white" href="/">
+                            Home
+                        </a>
+
+                    </li>
+                    <li class="nav-item me-4 dropdown mt-3">
+                        <a class="nav-link fs-5 text-white" href="#">
+                            Booking
+                        </a>
+
+                    </li>
+                    <li class="nav-item me-4 dropdown mt-3">
+                        <a class="nav-link fs-5 text-white" href="/designium-solutions/public/company/contact">
+                            Contact
+                        </a>
+
+                    </li>
+                    <li class="nav-item me-4 dropdown mt-3">
+                        <a class="nav-link fs-5 text-white" href="/designium-solutions/public/company/about">
+                            About
+                        </a>
+
+                    </li>
+                    <li>
+                        <button id="about-btn" class="rounded">Book Now
+                            <svg class="about-btn" style="height: 15px; width:20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="white"></path>
+                            </svg>
+                        </button>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% block content %}{% endblock content %}
+    <footer class="mt-5 text-light" id="about-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 p-5 ">
+                    <h2>Logo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nobis
+                        dignissimos fuga aliquam, deleniti ullam beatae. Eveniet vel, natus reprehenderit animi.</p>
+                    <div class="d-flex gap-4">
+                        <div>
+                            <svg style="height: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path
+                                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <svg style="height: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <svg style="height: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path
+                                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 p-5">
+                    <h2>Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-light mb-2" style="font-size:large">Home</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none text-light mb-2" style="font-size:large">Booking</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none text-light mb-2" style="font-size:large">About</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none text-light mb-2" style="font-size:large">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 pt-5">
+                    <div class="container-fluid p-4 rounded-3 " style="background-color: white;">
+                        <h4 class="text-dark">Join our newsletter</h4>
+                        <form action="#" method="post">
+                            <div class="row  mt-3">
+                                <div class="col-lg-8 col-sm-12">
+                                    <input type="email" name="email" id="email" placeholder="Write your email!"
+                                        class="w-100 bg-light py-2 px-3 shadow-sm border-0 ">
+                                </div>
+                                <div class="col-lg-4 col-sm-12 text-end ">
+                                    <button class="btn btn-primary w-100 py-2 send-btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <div class="d-flex">
+                <img src="https://dummyimage.com/55x30/f5f2f5/fff" alt="logo">
+                <h5 class="offcanvas-title ms-2" id="offcanvasRightLabel">Offcanvas right</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+
+
+                <li class="list-unstyled">
+                    <!-- <svg class="mb-2" style="height: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                            d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                    </svg> -->
+
+                    <a href="./index.html" class="text-black text-decoration-none fs-5">Home</a>
+                </li>
+
+
+                <hr>
+                <li class="list-unstyled"><a href="#" class="text-black text-decoration-none fs-5">Booking</a></li>
+                <hr>
+                <li class="list-unstyled">
+                    <!-- <svg class="mb-2" style="height: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                            d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                    </svg> -->
+                    <a href="./contact.html" class="text-black text-decoration-none fs-5">Contact</a>
+                </li>
+                <hr>
+                <li class="list-unstyled"><a href="./About.html" class="text-black text-decoration-none fs-5">About</a>
+                </li>
+                <hr>
+                <li class="list-unstyled dropdown">
+                    <a class="text-black text-decoration-none fs-5" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Pages
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-light">
+                        <li><a class="dropdown-item" href="#">Lorem</a></li>
+                        <li><a class="dropdown-item" href="#">Lorem</a></li>
+                        <li><a class="dropdown-item" href="#">Lorem</a></li>
+                    </ul>
+                </li>
+                <hr>
+            </ul>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>
